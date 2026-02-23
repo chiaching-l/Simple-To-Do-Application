@@ -1,0 +1,25 @@
+
+
+### 1. (GET)
+GET http://localhost:4000/api/todo
+
+
+### 2. (POST)
+POST http://localhost:4000/api/todo
+Content-Type: application/json
+
+{
+  "task": "finish the backend testing"
+}
+
+### 3. (PUT with ID, if completed: true, "True", "Yes", 1, '1' ) 
+PUT http://localhost:4000/api/todo/1
+Content-Type: application/json
+
+{
+  "completed": "Yes"
+}
+
+
+### 4. (DELETE with ID)
+DELETE http://localhost:4000/api/todo/2
