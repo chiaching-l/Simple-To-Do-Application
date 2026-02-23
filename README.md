@@ -8,6 +8,16 @@ A simple full-stack web application built with React, Node.js, Express, and SQLi
 - **Bonus Feature (Editing):** Includes an inline editing mode that allows users to seamlessly modify any task description at any time.
 - **Empty State Handling:** Displays a user-friendly prompt when no tasks are currently in the list.
 
+## Live Deployment (Bonus Feature)
+This project has been successfully deployed to the cloud. You can test the live application here:
+
+* **Frontend (Live App):** Vercel URL (`https://simple-to-do-application-f11v7ltew-chiaching-ls-projects.vercel.app/`)
+* **Backend API:** Render URL (`https://simple-to-do-application-backend.onrender.com`)
+
+**Deployment Architecture:**
+* **Environment Separation:** The `main` branch is preserved strictly for local development (configured to fetch from `http://localhost:4000`). A separate `deploy` branch was created specifically for the production environment to connect the Vercel frontend to the Render backend.
+
+
 ## Installation
 Clone the repository (or download the source code):
 ```
