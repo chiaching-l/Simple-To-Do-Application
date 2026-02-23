@@ -2,17 +2,17 @@
 A simple full-stack web application built with React, Node.js, Express, and SQLite. This project allows users to manage their daily tasks with a clean frontend interface and a persistent backend database.
 
 ## Features
-* **Task Management:** Create, Read, Update (toggle completion status & edit text), and Delete (CRUD) tasks.
-* **Component-Based UI:** Built with React, featuring separated components (`AddTodo`, `TodoList`, `TodoItem`) for better code organization.
-* **Data Persistence:** Tasks are permanently stored in a local SQLite database (`database.sqlite`).
-* **Bonus Feature (Editing):** Includes an inline editing mode that allows users to seamlessly modify any task description at any time.
-* **Empty State Handling:** Displays a user-friendly prompt when no tasks are currently in the list.
+- **Task Management:** Create, Read, Update (toggle completion status & edit text), and Delete (CRUD) tasks.
+- **Component-Based UI:** Built with React, featuring separated components (`AddTodo`, `TodoList`, `TodoItem`) for better code organization.
+- **Data Persistence:** Tasks are permanently stored in a local SQLite database (`database.sqlite`).
+- **Bonus Feature (Editing):** Includes an inline editing mode that allows users to seamlessly modify any task description at any time.
+- **Empty State Handling:** Displays a user-friendly prompt when no tasks are currently in the list.
 
 ## Installation
 Clone the repository (or download the source code):
 ```
 git clone https://github.com/chiaching-l/Simple-To-Do-Application.git
-cd Project Assignment Simple To-Do Application
+cd Simple-To-Do-Application
 ```
 
 This project consists of two parts: the frontend (React) and the server (Node.js). You need to install dependencies for both.
@@ -20,7 +20,7 @@ This project consists of two parts: the frontend (React) and the server (Node.js
 1. Install Backend dependencies:
 ```
 cd backend
-npm install express cors sqlite3
+npm install
 ```
 
 2. Install Frontend dependencies:
@@ -31,7 +31,7 @@ npm install
 
 
 ## Configuration
-This project uses SQLite for data storage. No `.env` files or external database URI configurations are required. The `database.sqlite` file and the `todo` table will be automatically created in the `server` directory the first time you run the backend server.
+This project uses SQLite for data storage. The `database.sqlite` file and the `todo` table will be automatically created in the `server` directory the first time you run the backend server.
 
 ## Running the Application (Local)
 You will need to open **two separate terminal windows** to run the frontend and backend simultaneously.
@@ -43,9 +43,11 @@ node server.js
 ```
 
 *You should see the following messages indicating the server and database are active:*
+```
 Server is running on http://localhost:4000
 Connected to the SQLite database.
 TABLE CREATED
+```
 
 **Terminal 2: Start the Frontend React App**
 ```
@@ -55,43 +57,6 @@ npm start
 
 *The application will automatically open in your default browser at:*
 http://localhost:3000
-
-## API Testing Tool
-The backend API can be tested using the VS Code REST Client extension. 
-
-### 1. (GET) Retrieve all tasks
-GET http://localhost:4000/api/todo
-
-###
-
-### 2. (POST) Add a new task
-POST http://localhost:4000/api/todo
-Content-Type: application/json
-
-{
-    "task": "Finish React frontend",
-    "completed": 0
-}
-
-###
-
-### 3. (PUT) Update a task (Text or Status)
-# CHANGE YOUR_ID down below 
-PUT http://localhost:4000/api/todo/1
-Content-Type: application/json
-
-{
-    "task": "Finish React frontend and write README",
-    "completed": 1
-}
-
-###
-
-### 4. (DELETE) Delete a task
-# CHANGE YOUR_ID down below 
-DELETE http://localhost:4000/api/todo/1
-
-###
 
 ## API Endpoints
 
@@ -104,6 +69,7 @@ DELETE http://localhost:4000/api/todo/1
 | DELETE | `/api/todo/:id` | Delete a to-do by ID |
 
 ## Project Structure
+```text
 Project/
 ├── frontend/               
 │   ├── public/
@@ -122,6 +88,7 @@ Project/
 │   ├── database.sqlite     # Auto-generated database file
 │   └── package.json
 └── README.md
+```
 
 ## Dependencies
 **Backend:**
