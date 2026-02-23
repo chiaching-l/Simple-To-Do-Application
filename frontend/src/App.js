@@ -63,7 +63,7 @@ function App() {
   // 4. delete
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/todo/${id}`);
+      await axios.delete(`https://simple-to-do-application-backend.onrender.com/api/todo/${id}`);
       setTodo(todo.filter((todo) => todo.id !== id));
     } catch (error) {
       console.error("Error deleting todo:", error);
